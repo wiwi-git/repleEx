@@ -60,6 +60,20 @@ class MainViewController: UIViewController {
         mainView.addSubview(contentsView)
         mainView.addSubview(repleView)
         
+        NSLayoutConstraint.activate([
+            contentsView.topAnchor.constraint(equalTo: mainView.topAnchor),
+            
+        ])
+        
+        
+        let testImageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: self.view.frame.width)))
+        contentsView.addSubview(testImageView)
+        
+        
+        
+        let tableView = UITableView(frame: CGRect.zero)
+        tableView.isScrollEnabled = false
+        
     }
     
 }
